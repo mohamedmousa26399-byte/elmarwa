@@ -192,7 +192,9 @@
     data.documents.forEach(function (d) { groupsPresent[d.group] = 1; });
     fc.innerHTML = '<option value="">All products</option>' + GROUP_NAMES.filter(function (g) { return groupsPresent[g[0]]; })
       .map(function (g) { return '<option value="' + g[0] + '">' + g[1] + "</option>"; }).join("");
-    chipsEl.innerHTML = TYPE_FILTERS.map(function (t, i) {
+    var typesPresent = {};
+    data.documents.forEach(function (d) { typesPresent[typeFilter(d.type)] = 1; });
+    chipsEl.innerHTML = TYPE_FILTERS.filter(function (t) { return !t[0] || typesPresent[t[0]]; }).map(function (t, i) {
       return '<button class="chip" type="button" data-type="' + t[0] + '" aria-pressed="' + (i === 0) + '">' + t[1] + "</button>";
     }).join("");
     var type = "", q = new URLSearchParams(location.search);

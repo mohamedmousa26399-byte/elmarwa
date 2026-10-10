@@ -101,8 +101,8 @@ window.CATALOG_SNAPSHOT={
 {
 "brand": "Jinko Solar",
 "category": "PV modules",
-"model": "Tiger NEO 0.3 (650Wp)",
-"desc": "N-type Tiger Neo module, 650 Wp"
+"model": "Tiger NEO 3.0 (650Wp)",
+"desc": "N-type Tiger Neo 3.0 module, 650 Wp"
 },
 {
 "brand": "Suntree",
@@ -529,31 +529,10 @@ window.CATALOG_SNAPSHOT={
 },
 {
 "brand": "Huawei",
-"model": "SUN2000-30-40KTL-M3",
-"type": "Test report",
-"name": "DEWA test report",
-"link": "https://drive.google.com/file/d/1vhpcdirPqSQNazme7CG_cUqE25ZAZhv-/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-30-40KTL-M3",
-"type": "Test report",
-"name": "IEC 62109-1 test report",
-"link": "https://drive.google.com/file/d/1Di_2o6JEgMfkR9mwCQuriIbWkx63KhaN/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-30-40KTL-M3",
-"type": "Test report",
-"name": "IEC 62109-2 test report",
-"link": "https://drive.google.com/file/d/1TLfSUtijHIruNS_U8MDkwT-9YwC-LDEm/view?usp=sharing"
-},
-{
-"brand": "Huawei",
 "model": "SUN2000-50KTL-M3",
 "type": "Datasheet",
 "name": "Datasheet",
-"link": ""
+"link": "https://drive.google.com/file/d/1RLqkxuI7MnhKijaM265tsol6CRweRSr2/view?usp=sharing"
 },
 {
 "brand": "Huawei",
@@ -624,69 +603,6 @@ window.CATALOG_SNAPSHOT={
 "type": "Certificate",
 "name": "All certificates (RAR archive)",
 "link": "https://drive.google.com/file/d/17ZFugAO-9ZqqKTpx-aBgO7Nh2k9lXNAi/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 62109 test report (part 1)",
-"link": "https://drive.google.com/file/d/1wmTc0XGMeTXgbZ1QymFE4L8N7jAfAn12/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 62109 test report (part 2)",
-"link": "https://drive.google.com/file/d/1aqukijOPtP38Aatt9cdn_Phl9iNZQFZN/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 61727 test report (BV)",
-"link": "https://drive.google.com/file/d/1ELV7cUYL9Ghph2yC68r9c_KpWlGQQxnL/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 62116 test report (BV)",
-"link": "https://drive.google.com/file/d/1joU8exXKBZquYRIe-dF1if-Yrtt8iki9/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 61683 test report (BV)",
-"link": "https://drive.google.com/file/d/1sPq1GBOZ51se-J5C6Xywno67OT5wkO59/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 60068 test report (CTI)",
-"link": "https://drive.google.com/file/d/1ZQFBvlyD8uVOKpqoUIT4LZRAN9aNORaq/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IP66 / IEC 60529 test report",
-"link": "https://drive.google.com/file/d/1W4ksLerrorfrlsKe-Gm6iWa850sFu8WY/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "IEC 61000 EMC test report (TÜV SÜD)",
-"link": "https://drive.google.com/file/d/14yEaV3MFde1aBZq3jZL-cv7SMf8AiX-f/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-50KTL-M3",
-"type": "Test report",
-"name": "G99 test report (Intertek)",
-"link": "https://drive.google.com/file/d/1dJyE2jJ1uAjAutfQs-DfJcPgzngV4HWu/view?usp=sharing"
 },
 {
 "brand": "Huawei",
@@ -883,62 +799,6 @@ window.CATALOG_SNAPSHOT={
 "type": "Certificate",
 "name": "CE declaration of conformity",
 "link": "https://drive.google.com/file/d/1je4X9df-IsZhtIklGCdvcYwZxCRPPqqL/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 62109 test report (part 1)",
-"link": "https://drive.google.com/file/d/11rQ7jfknLv8moq1Xr74PH2BtvA0iINpQ/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 62109 test report (part 2)",
-"link": "https://drive.google.com/file/d/1nGOHSQf0jpDDubaInkR6-ziJl2t0bGGO/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 61727 test report (BV)",
-"link": "https://drive.google.com/file/d/16jXgowGSK3OEkNzaU9UMILbBmkjqpuUI/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 62116 test report (BV)",
-"link": "https://drive.google.com/file/d/1SFjsQWcGZfJ-mVxdPligmWFGFaDU3npG/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 61683 test report (BV)",
-"link": "https://drive.google.com/file/d/1KN8W0y-iI23vB8Y_brwxI5A13Iey0ICu/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IEC 60068 test report (CTI)",
-"link": "https://drive.google.com/file/d/1DtypZSV8yT99QYkN5il2wF-Wqnl4Futi/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "IP66 / IEC 60529 test report (TÜV Rheinland)",
-"link": "https://drive.google.com/file/d/1UlY0cI_kcS3USEW1vpaPGjadgXlPBk9C/view?usp=sharing"
-},
-{
-"brand": "Huawei",
-"model": "SUN2000-100-115KTL-M2",
-"type": "Test report",
-"name": "EMC test report (BV)",
-"link": "https://drive.google.com/file/d/1D1xPDh6CEjpf2KFMV9LrL88gcNcjLBtN/view?usp=sharing"
 },
 {
 "brand": "Huawei",
@@ -1656,38 +1516,269 @@ window.CATALOG_SNAPSHOT={
 },
 {
 "brand": "Jinko Solar",
-"model": "Tiger NEO (620Wp, 625Wp)",
+"model": "Tiger NEO (730Wp)",
+"type": "Datasheet",
+"name": "Datasheet – JKM710-735N-66HL5-BDV",
+"link": "https://drive.google.com/file/d/13j_bVLd3e7RW9vaDdV1NZRG9FCa57GgT/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "PAN file",
+"name": "PVsyst PAN file – JKM730N",
+"link": "https://drive.google.com/file/d/1WM7h9FBMIfbCoR10F4jwjMkWw65nU8eN/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
 "type": "Certificate",
-"name": "LID&Letid test report Tiger Neo_TUV Rheinland.pdf",
-"link": "https://drive.google.com/file/d/1w64Qb7cGpb1sherwUvNCVFLYdVKYBm02/view?usp=share_link"
+"name": "IEC 61215 / IEC 61730 (TÜV SÜD)",
+"link": "https://drive.google.com/file/d/1l20h2WJDxghdf0fFTeH6SfPCVlrsENT0/view?usp=sharing"
 },
 {
 "brand": "Jinko Solar",
 "model": "Tiger NEO (730Wp)",
-"type": "Datasheet",
-"name": "Datasheet",
-"link": ""
+"type": "Certificate",
+"name": "IEC 60068-2-68 Sand & dust",
+"link": "https://drive.google.com/file/d/117nVLJ0s4Dah6JIgxRBo9qOzp6xAJzYE/view?usp=sharing"
 },
 {
 "brand": "Jinko Solar",
 "model": "Tiger NEO (730Wp)",
-"type": "PAN file",
-"name": "PVsyst PAN file",
-"link": ""
+"type": "Certificate",
+"name": "IEC 61701 Salt mist",
+"link": "https://drive.google.com/file/d/1jkGNJZFl47OghdVDWUgK4IVlAU_vbKKv/view?usp=sharing"
 },
 {
 "brand": "Jinko Solar",
-"model": "Tiger NEO 0.3 (650Wp)",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 62716 Ammonia",
+"link": "https://drive.google.com/file/d/1MReBaWlyNF_9A5MNyEx3IjDm1bx7KjNG/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 62759 Transportation",
+"link": "https://drive.google.com/file/d/1Ql7L8f4MctpsJZCL2NrkWwrX6PF4FcfI/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 62892 Extended thermal cycling",
+"link": "https://drive.google.com/file/d/1uzO9R63lly_RdyOanKjVqjPSv0YxJNKu/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 62938 Non-uniform snow load",
+"link": "https://drive.google.com/file/d/1mIn0Jn8rkcKN6Inom8dH1s3Fct920gwC/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 62941 (Yuhuan factory)",
+"link": "https://drive.google.com/file/d/1Wv0Uh_aBdY273Hmya4ZekTX34DHfVT_C/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC 63209-1 Extended stress test",
+"link": "https://drive.google.com/file/d/1lRTC2Ihyse2eE0Xs6K_vqlpn30ZGfGyI/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC TS 62782 Dynamic mechanical load (DEKRA)",
+"link": "https://drive.google.com/file/d/17OQjnP4LXuBQAhVmyBBZdNwKPCT7r-jg/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC TS 62804-1 PID",
+"link": "https://drive.google.com/file/d/1zuGl0L8FI6uCNbHnd3WB2ijCHrQhqclF/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC TS 62804-1-1 PID",
+"link": "https://drive.google.com/file/d/1m0I8LP9ccT2sh2UTNEORIYo0vMblzk0K/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC TS 63126 High temperature (TÜV SÜD)",
+"link": "https://drive.google.com/file/d/1_vCVTijcmHA9rPemsil_s3oP0ciPBCCx/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO (730Wp)",
+"type": "Certificate",
+"name": "IEC TS 63342 LeTID",
+"link": "https://drive.google.com/file/d/1pplRNUzMx6MmNdVAJGPL7Rx7PlZP1QEo/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
 "type": "Datasheet",
-"name": "Datasheet",
-"link": ""
+"name": "Datasheet – JKM635-670N-66QL6-BDV",
+"link": "https://drive.google.com/file/d/1JZcCVD11Clz6U7gVIb6hDXJHw0Wu4vSO/view?usp=sharing"
 },
 {
 "brand": "Jinko Solar",
-"model": "Tiger NEO 0.3 (650Wp)",
+"model": "Tiger NEO 3.0 (650Wp)",
 "type": "PAN file",
-"name": "PVsyst PAN file",
-"link": ""
+"name": "PVsyst PAN file – JKM650N",
+"link": "https://drive.google.com/file/d/16vwfB0uGY7UPUoj4_xsBbpT00l9XOESW/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Installation manual",
+"name": "Installation manual",
+"link": "https://drive.google.com/file/d/1FvVzFGzl_4xy356jxhFMSLBIZ4JJIb_o/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "O&M manual",
+"name": "O&M manual",
+"link": "https://drive.google.com/file/d/1BHd9JqlRSCNt3HDV9eaXjR11beA7VLk6/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Unpacking manual",
+"name": "Unpacking & storage instructions",
+"link": "https://drive.google.com/file/d/1wBo1j5ehaqDLDyE1gaBmwrgauyuLFRwd/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Unloading manual",
+"name": "Unloading manual",
+"link": "https://drive.google.com/file/d/1MKIP3VL4r2DbR5jEfOHoY-UQMzHQYb7w/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Cleaning manual",
+"name": "Cleaning manual",
+"link": "https://drive.google.com/file/d/11tO7eyScUrWWxzC_OXVQkkkv2oQ3WU1f/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 61215 / IEC 61730 (TÜV SÜD)",
+"link": "https://drive.google.com/file/d/1GB6f4BBJmYlrIYPFxIx8UIRuVzXZU8y-/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 60068-2-68 Sand & dust",
+"link": "https://drive.google.com/file/d/1N6XOsHATaMuh7WvrpM4Fy9yBmOXTCFP2/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 61701 Salt mist",
+"link": "https://drive.google.com/file/d/1G4MOsdl_ajYjf1KBFknpG2KpX7Pfzi6H/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 62716 Ammonia",
+"link": "https://drive.google.com/file/d/1NXPakhFu8UzFWyQ1XqUt3rCy48-YHETl/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 62759 Transportation",
+"link": "https://drive.google.com/file/d/1CcyMppsxts2FlnGN2FtDQizNWtOSDDy2/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 62892 Extended thermal cycling",
+"link": "https://drive.google.com/file/d/1CpIdwby0jt5xRGHC6TzBVGYkcYrrNVIF/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 62938 Non-uniform snow load",
+"link": "https://drive.google.com/file/d/1T2bqmkQux3C4k7NHR4Z4JjSWYyNxKuzY/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 62941 (Yuhuan factory)",
+"link": "https://drive.google.com/file/d/1ErTXGZ_8VTyBXaBCqRX82FMiIyYf70r3/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC 63209-1 Extended stress test",
+"link": "https://drive.google.com/file/d/1CEjVZNw7VbVXG-D6VELwc3HWqSnv7bdk/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TR 63279",
+"link": "https://drive.google.com/file/d/1AVnfYXLXh8FoymIUNx4a3TTjNlk1LoRW/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TS 62782 Dynamic mechanical load (DEKRA)",
+"link": "https://drive.google.com/file/d/19_UF_Sk2gmeKWxoZE8Isvu9SPsUuoJ-n/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TS 62804-1 PID",
+"link": "https://drive.google.com/file/d/1o1G1YidABt_bxTRclPHVljgS5L7uh9DL/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TS 62804-1-1 PID",
+"link": "https://drive.google.com/file/d/1lNQTL5pU-Hqq1y2vfgNe014wrnJLKnh3/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TS 63126 High temperature (TÜV SÜD)",
+"link": "https://drive.google.com/file/d/1mAXb6B06pyPteAgW1Ek4voGqoePj4YZa/view?usp=sharing"
+},
+{
+"brand": "Jinko Solar",
+"model": "Tiger NEO 3.0 (650Wp)",
+"type": "Certificate",
+"name": "IEC TS 63342 LeTID",
+"link": "https://drive.google.com/file/d/1VkCFWl0eyk2CFgb-rLV8EWi8Z5sqTIpz/view?usp=sharing"
 },
 {
 "brand": "Suntree",
