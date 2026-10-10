@@ -214,7 +214,9 @@
       type = q.get("type");
       chipsEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.getAttribute("data-type") === type); });
     }
-    function render() {
+    var PAGE = 30, shown = PAGE;
+    function render(more) {
+      if (!more) shown = PAGE;
       var term = fs.value.trim().toLowerCase();
       var r = data.documents.filter(function (d) {
         return (!fb.value || d.b === fb.value) && (!fc.value || d.group === fc.value) && (!type || typeFilter(d.type) === type) &&
@@ -222,15 +224,18 @@
       });
       count.textContent = r.length + (r.length === 1 ? " document" : " documents");
       if (!r.length) { list.innerHTML = '<div class="empty">No documents match these filters. <a href="contact.html">Ask us</a> and we\'ll send what you need.</div>'; return; }
+      var total = r.length; r = r.slice(0, shown);
       list.innerHTML = r.map(function (d) {
         var title = d.model ? d.model + " – " + d.name : d.name;
         var meta = [d.brand, d.model ? "" : "All products", d.type].filter(Boolean).join(" · ");
         var thumb = d.photo ? '<span class="doc-thumb"><img src="' + esc(d.photo) + '" alt="" loading="lazy" decoding="async"></span>' : ICON_DOC;
         return '<div class="doc">' + thumb + "<div><h3>" + esc(title) + "</h3><p>" + esc(meta) + '</p></div><div class="acts">' + acts(d) + "</div></div>";
-      }).join("");
+      }).join("") + (total > shown ? '<div class="more-row"><button type="button" class="btn btn-line" id="more">Show more (' + (total - shown) + " remaining)</button></div>" : "");
+      var mb = document.getElementById("more");
+      if (mb) mb.onclick = function () { shown += PAGE; render(true); };
     }
-    fb.onchange = fc.onchange = render;
-    fs.oninput = render;
+    fb.onchange = fc.onchange = function () { render(); };
+    fs.oninput = function () { render(); };
     chipsEl.addEventListener("click", function (e) {
       var c = e.target.closest(".chip"); if (!c) return;
       type = c.getAttribute("data-type");

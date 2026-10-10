@@ -14,7 +14,7 @@ window.CATALOG_SNAPSHOT={
 "category": "On-grid inverters",
 "model": "SUN2000-12-20KTL-M2",
 "desc": "12–20 kW three-phase on-grid inverter",
-"photo": ""
+"photo": "sun2000-12-20ktl-m2.webp"
 },
 {
 "brand": "Huawei",
