@@ -194,26 +194,39 @@
   function renderDownloads(root, data) {
     var fb = root.querySelector("#f-brand"), fc = root.querySelector("#f-cat"), fs = root.querySelector("#f-search");
     var chipsEl = root.querySelector("#f-type"), list = root.querySelector("#docs"), count = root.querySelector("#count");
-    var brands = [], seen = {};
-    data.products.concat(data.documents).forEach(function (x) { if (x.b && !seen[x.b]) { seen[x.b] = x.brand; brands.push(x.b); } });
-    fb.innerHTML = '<option value="">All brands</option>' + brands.map(function (b) { return '<option value="' + esc(b) + '">' + esc(seen[b]) + "</option>"; }).join("");
-    var groupsPresent = {};
-    data.documents.forEach(function (d) { groupsPresent[d.group] = 1; });
-    fc.innerHTML = '<option value="">All products</option>' + GROUP_NAMES.filter(function (g) { return groupsPresent[g[0]]; })
-      .map(function (g) { return '<option value="' + g[0] + '">' + g[1] + "</option>"; }).join("");
-    var typesPresent = {};
-    data.documents.forEach(function (d) { typesPresent[typeFilter(d.type)] = 1; });
-    chipsEl.innerHTML = TYPE_FILTERS.filter(function (t) { return !t[0] || typesPresent[t[0]]; }).map(function (t, i) {
-      return '<button class="chip" type="button" data-type="' + t[0] + '" aria-pressed="' + (i === 0) + '">' + t[1] + "</button>";
-    }).join("");
+    var seen = {}, brandOrder = [];
+    data.products.concat(data.documents).forEach(function (x) { if (x.b && !seen[x.b]) { seen[x.b] = x.brand; brandOrder.push(x.b); } });
     var type = "", q = new URLSearchParams(location.search);
-    if (q.get("brand")) fb.value = q.get("brand");
-    if (q.get("category")) fc.value = q.get("category");
+    var want = { brand: q.get("brand") || "", cat: q.get("category") || "" };
     if (q.get("q")) fs.value = q.get("q");
-    if (q.get("type")) {
-      type = q.get("type");
-      chipsEl.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.getAttribute("data-type") === type); });
+    if (q.get("type")) type = q.get("type");
+
+    // Each list only offers choices that exist for the other selections:
+    // Brand "Jinko Solar" -> Product shows "PV modules" only; Product "Batteries" -> Brand shows battery brands only.
+    function fillSelect(sel, allLabel, options, current) {
+      sel.innerHTML = '<option value="">' + allLabel + "</option>" +
+        options.map(function (o) { return '<option value="' + esc(o[0]) + '">' + esc(o[1]) + "</option>"; }).join("");
+      sel.value = options.some(function (o) { return o[0] === current; }) ? current : "";
     }
+    function refreshFilters() {
+      var b = fb.value || want.brand, c = fc.value || want.cat;
+      want = { brand: "", cat: "" };
+      var forBrand = data.documents.filter(function (d) { return !b || d.b === b; });
+      var groups = {}; forBrand.forEach(function (d) { groups[d.group] = 1; });
+      fillSelect(fc, "All products", GROUP_NAMES.filter(function (g) { return groups[g[0]]; }), c);
+      var forCat = data.documents.filter(function (d) { return !fc.value || d.group === fc.value; });
+      var bs = {}; forCat.forEach(function (d) { bs[d.b] = 1; });
+      fillSelect(fb, "All brands", brandOrder.filter(function (x) { return bs[x]; }).map(function (x) { return [x, seen[x]]; }), b);
+      var types = {};
+      data.documents.forEach(function (d) {
+        if ((!fb.value || d.b === fb.value) && (!fc.value || d.group === fc.value)) types[typeFilter(d.type)] = 1;
+      });
+      if (type && !types[type]) type = "";
+      chipsEl.innerHTML = TYPE_FILTERS.filter(function (t) { return !t[0] || types[t[0]]; }).map(function (t) {
+        return '<button class="chip" type="button" data-type="' + t[0] + '" aria-pressed="' + (t[0] === type) + '">' + t[1] + "</button>";
+      }).join("");
+    }
+    refreshFilters();
     var PAGE = 30, shown = PAGE;
     function render(more) {
       if (!more) shown = PAGE;
@@ -234,7 +247,7 @@
       var mb = document.getElementById("more");
       if (mb) mb.onclick = function () { shown += PAGE; render(true); };
     }
-    fb.onchange = fc.onchange = function () { render(); };
+    fb.onchange = fc.onchange = function () { refreshFilters(); render(); };
     fs.oninput = function () { render(); };
     chipsEl.addEventListener("click", function (e) {
       var c = e.target.closest(".chip"); if (!c) return;
