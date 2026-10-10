@@ -3,6 +3,33 @@
 (function () {
   "use strict";
 
+  var AR = (document.documentElement.lang || "").slice(0, 2) === "ar";
+  var ROOT = window.SITE_ROOT || "";
+  var T = AR ? {
+    general: "مستندات عامة", allOf: "كل منتجات ", onRequest: 'المستندات متاحة عند الطلب. <a href="contact.html">اسألنا</a>.',
+    quote: "اطلب عرض سعر", open: "فتح", download: "تحميل", allBrands: "كل العلامات", allProducts: "كل المنتجات",
+    soon: 'تفاصيل الموديلات ومستنداتها لهذه العلامة متاحة قريبًا. <a href="contact.html">تواصل معنا</a> للحصول على الداتا شيت والأسعار.',
+    none: 'لا توجد مستندات مطابقة لهذه الاختيارات. <a href="contact.html">اسألنا</a> وسنرسل لك ما تحتاجه.',
+    count: function (n) { return "عدد المستندات: " + n; }, more: function (n) { return "عرض المزيد (المتبقي: " + n + ")"; },
+    allProductsMeta: "كل المنتجات"
+  } : {
+    general: "General documents", allOf: "All ", onRequest: 'Documents available on request. <a href="contact.html">Ask us</a>.',
+    quote: "Request a quote", open: "Open", download: "Download", allBrands: "All brands", allProducts: "All products",
+    soon: 'Model details and documents for this brand are coming soon. <a href="contact.html">Contact us</a> for datasheets and prices.',
+    none: 'No documents match these filters. <a href="contact.html">Ask us</a> and we\'ll send what you need.',
+    count: function (n) { return n + (n === 1 ? " document" : " documents"); }, more: function (n) { return "Show more (" + n + " remaining)"; },
+    allProductsMeta: "All products"
+  };
+  var BRAND_AR = { "huawei": "هواوي فيوجن سولار", "jinko-solar": "جينكو سولار", "sigenergy": "سيجنرجي", "invt": "إنفيت",
+    "newmax": "نيوماكس", "his": "إتش آي إس (هيكرا)", "suntree": "سنتري", "elmarwa": "المروة" };
+  var TYPE_AR = { "Datasheet": "داتا شيت", "OND file": "ملف OND", "PAN file": "ملف PAN", "User manual": "دليل المستخدم", "Quick guide": "الدليل السريع",
+    "Installation manual": "دليل التركيب", "O&M manual": "دليل التشغيل والصيانة", "Unpacking manual": "تعليمات الفك والتخزين",
+    "Unloading manual": "دليل التفريغ", "Cleaning manual": "دليل التنظيف", "Certificate": "شهادة", "Product catalogue": "كتالوج المنتجات", "Other": "أخرى" };
+  var CAT_AR = { "On-grid inverters": "إنفرترات متصلة بالشبكة", "Hybrid inverters": "إنفرترات هجينة", "Monitoring": "المراقبة",
+    "C&I battery": "بطاريات المنشآت التجارية والصناعية", "Home battery": "بطاريات منزلية", "PV modules": "ألواح شمسية", "Batteries": "بطاريات",
+    "Solar pump drives": "إنفرترات الطلمبات الشمسية", "Mounting structures": "هياكل تثبيت الألواح", "DC cables": "كابلات التيار المستمر (DC)", "DC protection": "حمايات التيار المستمر (DC)" };
+  function brandName(slug, fallback) { return AR && BRAND_AR[slug] ? BRAND_AR[slug] : fallback; }
+  function typeName(t) { return AR && TYPE_AR[t] ? TYPE_AR[t] : t; }
   var BRAND_SLUG = {
     "huawei": "huawei", "huawei fusionsolar": "huawei", "jinko solar": "jinko-solar", "jinko": "jinko-solar",
     "sigenergy": "sigenergy", "invt": "invt", "newmax": "newmax",
@@ -15,19 +42,23 @@
     "battery storage": "storage", "solar pump drives": "pumping", "mounting structures": "mounting",
     "dc cables": "cables", "dc protection": "protection"
   };
-  var GROUP_NAMES = [["modules", "PV modules"], ["inverters", "Inverters"], ["storage", "Batteries"], ["monitoring", "Monitoring"],
+  var GROUP_NAMES = AR ? [["modules", "ألواح شمسية"], ["inverters", "إنفرترات"], ["storage", "بطاريات"], ["monitoring", "المراقبة"],
+    ["pumping", "إنفرترات الطلمبات الشمسية"], ["mounting", "هياكل تثبيت الألواح"], ["cables", "كابلات التيار المستمر (DC)"], ["protection", "حمايات التيار المستمر (DC)"]]
+    : [["modules", "PV modules"], ["inverters", "Inverters"], ["storage", "Batteries"], ["monitoring", "Monitoring"],
     ["pumping", "Solar pump drives"], ["mounting", "Mounting structures"], ["cables", "DC cables"], ["protection", "DC protection"]];
   var TYPE_ORDER = ["Datasheet", "Product catalogue", "User manual", "Quick guide", "Installation manual", "O&M manual",
     "Unpacking manual", "Unloading manual", "Cleaning manual", "OND file", "PAN file", "Other", "Certificate", "Test report"];
-  var PLURAL = { "Datasheet": "Datasheets", "OND file": "PVsyst OND files", "PAN file": "PVsyst PAN files",
+  var PLURAL = AR ? { "Datasheet": "داتا شيت", "OND file": "ملفات PVsyst OND", "PAN file": "ملفات PVsyst PAN", "Certificate": "الشهادات",
+    "Test report": "تقارير الاختبار", "User manual": "أدلة المستخدم", "Quick guide": "الأدلة السريعة", "Product catalogue": "كتالوجات المنتجات",
+    "Installation manual": "أدلة التركيب", "O&M manual": "أدلة التشغيل والصيانة", "Other": "مستندات أخرى" } : { "Datasheet": "Datasheets", "OND file": "PVsyst OND files", "PAN file": "PVsyst PAN files",
     "Certificate": "Certificates", "Test report": "Test reports", "User manual": "User manuals", "Quick guide": "Quick guides",
     "Product catalogue": "Product catalogues", "Other": "Other documents" };
   var ALWAYS_GROUP = { "Certificate": 1, "Test report": 1 };
   var DOWNLOAD_ONLY = { "OND file": 1, "PAN file": 1 };
-  var TYPE_FILTERS = [
-    ["", "All"], ["datasheets", "Datasheets"], ["manuals", "Manuals & guides"], ["pvsyst", "PVsyst files"],
-    ["certificates", "Certificates"], ["reports", "Test reports"], ["other", "Other"]
-  ];
+  var TYPE_FILTERS = AR ? [["", "الكل"], ["datasheets", "داتا شيت"], ["manuals", "الأدلة"], ["pvsyst", "ملفات PVsyst"],
+    ["certificates", "الشهادات"], ["reports", "تقارير الاختبار"], ["other", "أخرى"]]
+    : [["", "All"], ["datasheets", "Datasheets"], ["manuals", "Manuals & guides"], ["pvsyst", "PVsyst files"],
+    ["certificates", "Certificates"], ["reports", "Test reports"], ["other", "Other"]];
   function typeFilter(t) {
     if (t === "Datasheet") return "datasheets";
     if (t === "OND file" || t === "PAN file") return "pvsyst";
@@ -57,7 +88,7 @@
     f = String(f || "").trim();
     if (!f) return "";
     if (/^https?:\/\//i.test(f) || f.indexOf("/") >= 0) return f;
-    return "images/products/" + f;
+    return ROOT + "images/products/" + f;
   }
   function validLink(u) { return !!u && /^https?:\/\//i.test(u) && u.indexOf("EXAMPLE") < 0; }
 
@@ -87,22 +118,26 @@
   function fromSheet(prodRows, docRows) {
     return {
       products: toObjects(prodRows).filter(function (p) { return p.model; }).map(function (p) {
-        return { brand: p.brand, category: p.category, model: p.model, desc: p["short description"] || "", photo: p.photo || "" };
+        return { brand: p.brand, category: p.category, model: p.model, desc: p["short description"] || "", photo: p.photo || "",
+          category_ar: p["category (ar)"] || "", desc_ar: p["short description (ar)"] || "" };
       }),
       documents: toObjects(docRows).map(function (d) {
-        return { brand: d.brand, model: d.model, type: d.type, name: d["name shown on website"] || d["document name"] || d.type, link: d["drive link"] };
+        return { brand: d.brand, model: d.model, type: d.type, name: d["name shown on website"] || d["document name"] || d.type, link: d["drive link"],
+          name_ar: d["name shown on website (ar)"] || "" };
       })
     };
   }
   function normalise(data) {
     var products = (data.products || []).map(function (p) {
-      return { brand: p.brand, b: brandSlug(p.brand), category: p.category || "Products", group: groupOf(p.category), model: p.model, desc: p.desc || "", photo: photoUrl(p.photo) };
+      var b = brandSlug(p.brand);
+      return { brand: brandName(b, p.brand), b: b, category: (AR && (p.category_ar || CAT_AR[p.category])) || p.category || "Products", catKey: p.category,
+        group: groupOf(p.category), model: p.model, desc: (AR && p.desc_ar) || p.desc || "", photo: photoUrl(p.photo) };
     });
     var catOf = {};
     products.forEach(function (p) { catOf[p.b + "|" + p.model] = p; });
     var docs = (data.documents || []).filter(function (d) { return validLink(d.link); }).map(function (d) {
       var b = brandSlug(d.brand), p = catOf[b + "|" + (d.model || "")];
-      return { brand: d.brand, b: b, model: d.model || "", type: d.type || "Other", name: d.name || d.type || "Document",
+      return { brand: brandName(b, d.brand), b: b, model: d.model || "", type: d.type || "Other", name: (AR && d.name_ar) || d.name || d.type || "Document",
         link: d.link, view: viewUrl(d.link), dl: dlUrl(d.link), group: p ? p.group : "other", category: p ? p.category : "", photo: p ? p.photo : "" };
     });
     return { products: products, documents: docs };
@@ -125,12 +160,12 @@
       return '<span class="dbtn"><a href="' + esc(d.dl) + '" rel="noopener">' + ICON_DL + esc(d.name) + "</a></span>";
     }
     return '<span class="dbtn"><a href="' + esc(d.view) + '" target="_blank" rel="noopener">' + esc(d.name) + "</a>" +
-      '<a class="dl" href="' + esc(d.dl) + '" rel="noopener" title="Download" aria-label="Download ' + esc(d.name) + '">' + ICON_DL + "</a></span>";
+      '<a class="dl" href="' + esc(d.dl) + '" rel="noopener" title="' + T.download + '" aria-label="' + T.download + " " + esc(d.name) + '">' + ICON_DL + "</a></span>";
   }
   function acts(d) {
     var a = "";
-    if (!DOWNLOAD_ONLY[d.type]) a += '<a href="' + esc(d.view) + '" target="_blank" rel="noopener">' + ICON_OPEN + "Open</a>";
-    a += '<a href="' + esc(d.dl) + '" rel="noopener">' + ICON_DL + "Download</a>";
+    if (!DOWNLOAD_ONLY[d.type]) a += '<a href="' + esc(d.view) + '" target="_blank" rel="noopener">' + ICON_OPEN + T.open + "</a>";
+    a += '<a href="' + esc(d.dl) + '" rel="noopener">' + ICON_DL + T.download + "</a>";
     return a;
   }
   function group(type, list) {
@@ -139,7 +174,7 @@
       "</ul></details>";
   }
   function docsBlock(list) {
-    if (!list.length) return '<p class="none">Documents available on request. <a href="contact.html">Ask us</a>.</p>';
+    if (!list.length) return '<p class="none">' + T.onRequest + "</p>";
     var byType = {}, types = [];
     list.forEach(function (d) { if (!byType[d.type]) { byType[d.type] = []; types.push(d.type); } byType[d.type].push(d); });
     types.sort(function (a, b) {
@@ -162,15 +197,15 @@
     var docs = data.documents.filter(function (d) { return d.b === b; });
     var general = docs.filter(function (d) { return !d.model; });
     if (!prods.length && !general.length) {
-      el.innerHTML = '<p class="none">Model details and documents for this brand are coming soon. <a href="contact.html">Contact us</a> for datasheets and prices.</p>';
+      el.innerHTML = '<p class="none">' + T.soon + "</p>";
       return;
     }
     var cats = [], byCat = {};
     prods.forEach(function (p) { if (!byCat[p.category]) { byCat[p.category] = []; cats.push(p.category); } byCat[p.category].push(p); });
     var html = "";
     if (general.length) {
-      html += '<div class="cat-block"><h3 class="cat-title">General documents</h3><div class="models"><article class="model model-general">' +
-        "<h4>All " + esc(prods[0] ? prods[0].brand : "") + " products</h4>" + docsBlock(general) + "</article></div></div>";
+      html += '<div class="cat-block"><h3 class="cat-title">' + T.general + '</h3><div class="models"><article class="model model-general">' +
+        "<h4>" + T.allOf + esc(prods[0] ? prods[0].brand : "") + (AR ? "" : " products") + "</h4>" + docsBlock(general) + "</article></div></div>";
     }
     cats.forEach(function (c) {
       html += '<div class="cat-block"><h3 class="cat-title">' + esc(c) + ' <span class="count">' + byCat[c].length + "</span></h3><div class=\"models\">";
@@ -180,7 +215,7 @@
           '<div class="model-photo">' + (p.photo ? '<img src="' + esc(p.photo) + '" alt="' + esc(p.model) + '" loading="lazy" decoding="async">' : ICON_PH) + "</div>" +
           '<div class="model-body"><h4>' + esc(p.model) + "</h4>" +
           (p.desc ? '<p class="desc">' + esc(p.desc) + "</p>" : "") + docsBlock(mine) +
-          '<a class="quote-link" href="contact.html?model=' + encodeURIComponent(p.model) + '">Request a quote</a></div></article>';
+          '<a class="quote-link" href="contact.html?model=' + encodeURIComponent(p.model) + '">' + T.quote + "</a></div></article>";
       });
       html += "</div></div>";
     });
@@ -213,10 +248,10 @@
       want = { brand: "", cat: "" };
       var forBrand = data.documents.filter(function (d) { return !b || d.b === b; });
       var groups = {}; forBrand.forEach(function (d) { groups[d.group] = 1; });
-      fillSelect(fc, "All products", GROUP_NAMES.filter(function (g) { return groups[g[0]]; }), c);
+      fillSelect(fc, T.allProducts, GROUP_NAMES.filter(function (g) { return groups[g[0]]; }), c);
       var forCat = data.documents.filter(function (d) { return !fc.value || d.group === fc.value; });
       var bs = {}; forCat.forEach(function (d) { bs[d.b] = 1; });
-      fillSelect(fb, "All brands", brandOrder.filter(function (x) { return bs[x]; }).map(function (x) { return [x, seen[x]]; }), b);
+      fillSelect(fb, T.allBrands, brandOrder.filter(function (x) { return bs[x]; }).map(function (x) { return [x, seen[x]]; }), b);
       var types = {};
       data.documents.forEach(function (d) {
         if ((!fb.value || d.b === fb.value) && (!fc.value || d.group === fc.value)) types[typeFilter(d.type)] = 1;
@@ -235,15 +270,15 @@
         return (!fb.value || d.b === fb.value) && (!fc.value || d.group === fc.value) && (!type || typeFilter(d.type) === type) &&
           (!term || (d.name + " " + d.model + " " + d.brand + " " + d.type).toLowerCase().indexOf(term) >= 0);
       });
-      count.textContent = r.length + (r.length === 1 ? " document" : " documents");
-      if (!r.length) { list.innerHTML = '<div class="empty">No documents match these filters. <a href="contact.html">Ask us</a> and we\'ll send what you need.</div>'; return; }
+      count.textContent = T.count(r.length);
+      if (!r.length) { list.innerHTML = '<div class="empty">' + T.none + "</div>"; return; }
       var total = r.length; r = r.slice(0, shown);
       list.innerHTML = r.map(function (d) {
         var title = d.model ? d.model + " – " + d.name : d.name;
-        var meta = [d.brand, d.model ? "" : "All products", d.type].filter(Boolean).join(" · ");
+        var meta = [d.brand, d.model ? "" : T.allProductsMeta, typeName(d.type)].filter(Boolean).join(" · ");
         var thumb = d.photo ? '<span class="doc-thumb"><img src="' + esc(d.photo) + '" alt="" loading="lazy" decoding="async"></span>' : ICON_DOC;
         return '<div class="doc">' + thumb + "<div><h3>" + esc(title) + "</h3><p>" + esc(meta) + '</p></div><div class="acts">' + acts(d) + "</div></div>";
-      }).join("") + (total > shown ? '<div class="more-row"><button type="button" class="btn btn-line" id="more">Show more (' + (total - shown) + " remaining)</button></div>" : "");
+      }).join("") + (total > shown ? '<div class="more-row"><button type="button" class="btn btn-line" id="more">' + T.more(total - shown) + "</button></div>" : "");
       var mb = document.getElementById("more");
       if (mb) mb.onclick = function () { shown += PAGE; render(true); };
     }
