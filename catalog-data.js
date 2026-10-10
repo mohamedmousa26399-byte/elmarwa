@@ -125,14 +125,20 @@ window.CATALOG_SNAPSHOT={
 {
 "brand": "INVT",
 "category": "Solar pump drives",
-"model": "INVT solar pump drive",
-"desc": "Solar pump drive (please confirm the product name)"
+"model": "GD100-PV Series (800V)",
+"desc": "Solar pump inverter, 800 V series"
+},
+{
+"brand": "INVT",
+"category": "Solar pump drives",
+"model": "GD170-PV Series (900V)",
+"desc": "Solar pump inverter, 900 V series"
 },
 {
 "brand": "Newmax",
 "category": "Batteries",
-"model": "Newmax battery",
-"desc": "Battery (please confirm gel or lithium)"
+"model": "Newmax LFP battery",
+"desc": "LFP lithium battery"
 }
 ],
 "documents": [
@@ -1687,8 +1693,8 @@ window.CATALOG_SNAPSHOT={
 "brand": "Suntree",
 "model": "Suntree DC protection",
 "type": "Product catalogue",
-"name": "Product catalogue",
-"link": ""
+"name": "Suntree product catalogue",
+"link": "https://drive.google.com/file/d/1Fe4HYSSleRBJnmqZE0YbnL1FGSEd5QFa/view?usp=sharing"
 },
 {
 "brand": "Suntree",
@@ -1702,21 +1708,28 @@ window.CATALOG_SNAPSHOT={
 "model": "Suntree DC cables",
 "type": "Datasheet",
 "name": "Datasheet",
-"link": ""
+"link": "https://drive.google.com/file/d/1JApLCikOkQ_f07NcjSDNIQoKYQKGf6Mb/view?usp=sharing"
 },
 {
 "brand": "Suntree",
 "model": "Suntree DC cables",
 "type": "Certificate",
-"name": "",
-"link": ""
+"name": "DC cable certificate",
+"link": "https://drive.google.com/file/d/1Sc4ztXV-s52inqs6cxGaRd6mWGG0QGrF/view?usp=sharing"
 },
 {
 "brand": "H.I.S. (Hikra)",
 "model": "H.I.S. DC cables",
 "type": "Datasheet",
-"name": "Datasheet",
-"link": ""
+"name": "Datasheet – HIKRA TECH 1500 V solar cable",
+"link": "https://drive.google.com/file/d/1SP69EF1qO0LhR6RrN0UiaEfC4AyDJRz-/view?usp=sharing"
+},
+{
+"brand": "H.I.S. (Hikra)",
+"model": "H.I.S. DC cables",
+"type": "Other",
+"name": "Current rating table",
+"link": "https://drive.google.com/file/d/18eNHYdbig1TArn6OjPQc2Pm9K3PpdLxE/view?usp=sharing"
 },
 {
 "brand": "H.I.S. (Hikra)",
@@ -1727,17 +1740,38 @@ window.CATALOG_SNAPSHOT={
 },
 {
 "brand": "INVT",
-"model": "INVT solar pump drive",
+"model": "GD100-PV Series (800V)",
 "type": "User manual",
 "name": "User manual",
-"link": ""
+"link": "https://drive.google.com/file/d/1S2-GUTI4Klb8DwifH3cgr9lDjB-2-E3v/view?usp=sharing"
+},
+{
+"brand": "INVT",
+"model": "GD170-PV Series (900V)",
+"type": "Datasheet",
+"name": "Datasheet",
+"link": "https://drive.google.com/file/d/12sPv8KTnMWqr4L3GF03_wunbyiBBhMuf/view?usp=sharing"
+},
+{
+"brand": "INVT",
+"model": "GD170-PV Series (900V)",
+"type": "User manual",
+"name": "User manual",
+"link": "https://drive.google.com/file/d/1TY6iOsJpIJ9Nf-DyaoM7KeBeJwAbxk4Z/view?usp=sharing"
 },
 {
 "brand": "Newmax",
-"model": "Newmax battery",
+"model": "Newmax LFP battery",
 "type": "Datasheet",
 "name": "Datasheet",
-"link": ""
+"link": "https://drive.google.com/file/d/1ttHqcZwhcAa796tqEvySf6tV4Kk5NMaz/view?usp=sharing"
+},
+{
+"brand": "Newmax",
+"model": "Newmax LFP battery",
+"type": "User manual",
+"name": "User manual",
+"link": "https://drive.google.com/file/d/1lW2eFrKCxpqZWEbLa2p79RG5DutJTwrX/view?usp=sharing"
 }
 ]
 };
