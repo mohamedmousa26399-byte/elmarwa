@@ -77,7 +77,7 @@ window.CATALOG_SNAPSHOT={
 "category": "Monitoring",
 "model": "DTSU666-HW",
 "desc": "Smart power meter",
-"photo": ""
+"photo": "dtsu666-hw.webp"
 },
 {
 "brand": "Huawei",
