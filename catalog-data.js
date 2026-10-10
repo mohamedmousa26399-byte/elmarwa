@@ -6,139 +6,162 @@ window.CATALOG_SNAPSHOT={
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-3-10KTL-M1",
-"desc": "3–10 kW three-phase on-grid inverter"
+"desc": "3–10 kW three-phase on-grid inverter",
+"photo": "sun2000-3-10ktl-m1.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-12-20KTL-M2",
-"desc": "12–20 kW three-phase on-grid inverter"
+"desc": "12–20 kW three-phase on-grid inverter",
+"photo": ""
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-12-25KTL-M5",
-"desc": "12–25 kW three-phase on-grid inverter"
+"desc": "12–25 kW three-phase on-grid inverter",
+"photo": "sun2000-12-25ktl-m5.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-30-40KTL-M3",
-"desc": "30–40 kW three-phase on-grid inverter"
+"desc": "30–40 kW three-phase on-grid inverter",
+"photo": "sun2000-30-50ktl-m3.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-50KTL-M3",
-"desc": "50 kW three-phase on-grid inverter"
+"desc": "50 kW three-phase on-grid inverter",
+"photo": "sun2000-30-50ktl-m3.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-60KTL-M0",
-"desc": "60 kW three-phase on-grid inverter"
+"desc": "60 kW three-phase on-grid inverter",
+"photo": "sun2000-60ktl-m0.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-100-115KTL-M2",
-"desc": "100–115 kW three-phase on-grid inverter"
+"desc": "100–115 kW three-phase on-grid inverter",
+"photo": "sun2000-100-115ktl-m2.webp"
 },
 {
 "brand": "Huawei",
 "category": "On-grid inverters",
 "model": "SUN2000-150KTL-MG0",
-"desc": "150 kW three-phase on-grid inverter"
+"desc": "150 kW three-phase on-grid inverter",
+"photo": "sun2000-150ktl-mg0.webp"
 },
 {
 "brand": "Huawei",
 "category": "Hybrid inverters",
 "model": "SUN2000-5-12KTL-MAP0",
-"desc": "5–12 kW three-phase residential inverter"
+"desc": "5–12 kW three-phase residential inverter",
+"photo": "sun2000-5-12ktl-map0.webp"
 },
 {
 "brand": "Huawei",
 "category": "Hybrid inverters",
 "model": "SUN2000-12-25KTL-MB0",
-"desc": "12–25 kW three-phase residential inverter"
+"desc": "12–25 kW three-phase residential inverter",
+"photo": "sun2000-12-25ktl-mb0.webp"
 },
 {
 "brand": "Huawei",
 "category": "Monitoring",
 "model": "DTSU666-HW",
-"desc": "Smart power meter"
+"desc": "Smart power meter",
+"photo": ""
 },
 {
 "brand": "Huawei",
 "category": "Monitoring",
 "model": "SmartLogger3000A",
-"desc": "Data logger for monitoring and managing PV plants"
+"desc": "Data logger for monitoring and managing PV plants",
+"photo": "smartlogger3000a.webp"
 },
 {
 "brand": "Huawei",
 "category": "Monitoring",
 "model": "sDongle WLAN FE",
-"desc": "WLAN/FE communication dongle for inverter monitoring"
+"desc": "WLAN/FE communication dongle for inverter monitoring",
+"photo": "sdongle-wlan-fe.webp"
 },
 {
 "brand": "Huawei",
 "category": "C&I battery",
 "model": "LUNA2000-107-215",
-"desc": "Commercial & industrial battery energy storage system"
+"desc": "Commercial & industrial battery energy storage system",
+"photo": "luna2000-ci-ess.webp"
 },
 {
 "brand": "Jinko Solar",
 "category": "PV modules",
 "model": "Tiger NEO (620Wp, 625Wp)",
-"desc": "N-type Tiger Neo module, 620 / 625 Wp"
+"desc": "N-type Tiger Neo module, 620 / 625 Wp",
+"photo": "jinko-tiger-neo.webp"
 },
 {
 "brand": "Jinko Solar",
 "category": "PV modules",
 "model": "Tiger NEO (730Wp)",
-"desc": "N-type Tiger Neo module, 730 Wp"
+"desc": "N-type Tiger Neo module, 730 Wp",
+"photo": "jinko-tiger-neo.webp"
 },
 {
 "brand": "Jinko Solar",
 "category": "PV modules",
 "model": "Tiger NEO 3.0 (650Wp)",
-"desc": "N-type Tiger Neo 3.0 module, 650 Wp"
+"desc": "N-type Tiger Neo 3.0 module, 650 Wp",
+"photo": "jinko-tiger-neo.webp"
 },
 {
 "brand": "Suntree",
 "category": "DC protection",
 "model": "Suntree DC protection",
-"desc": "DC breakers, fuses, surge protection and isolators"
+"desc": "DC breakers, fuses, surge protection and isolators",
+"photo": "suntree-dc-protection.webp"
 },
 {
 "brand": "Suntree",
 "category": "DC cables",
 "model": "Suntree DC cables",
-"desc": "Solar DC cables"
+"desc": "Solar DC cables",
+"photo": ""
 },
 {
 "brand": "H.I.S. (Hikra)",
 "category": "DC cables",
 "model": "H.I.S. DC cables",
-"desc": "German 1500 VDC solar DC cables"
+"desc": "German 1500 VDC solar DC cables",
+"photo": "his-dc-cable.webp"
 },
 {
 "brand": "INVT",
 "category": "Solar pump drives",
 "model": "GD100-PV Series (800V)",
-"desc": "Solar pump inverter, 800 V series"
+"desc": "Solar pump inverter, 800 V series",
+"photo": "invt-gd100-pv.webp"
 },
 {
 "brand": "INVT",
 "category": "Solar pump drives",
 "model": "GD170-PV Series (900V)",
-"desc": "Solar pump inverter, 900 V series"
+"desc": "Solar pump inverter, 900 V series",
+"photo": "invt-gd170-pv.webp"
 },
 {
 "brand": "Newmax",
 "category": "Batteries",
 "model": "Newmax LFP battery",
-"desc": "LFP lithium battery"
+"desc": "LFP lithium battery",
+"photo": "newmax-lfp-battery.webp"
 }
 ],
 "documents": [

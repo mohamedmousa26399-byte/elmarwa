@@ -39,6 +39,7 @@
 
   var ICON_DL = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 2v8M4.5 7L8 10.5 11.5 7M3 13h10"/></svg>';
   var ICON_OPEN = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 3h4v4M13 3L7.5 8.5M12 9.5V13H3V4h3.5"/></svg>';
+  var ICON_PH = '<svg class="ph" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="9" width="34" height="30" rx="3"/><path d="M7 32l9-9 7 7 6-6 12 12"/><circle cx="31" cy="18" r="3"/></svg>';
   var ICON_DOC = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 3h11l6 6v20H8z"/><path d="M19 3v6h6M12 16h9M12 21h9M12 26h6"/></svg>';
 
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
@@ -52,6 +53,12 @@
   }
   function viewUrl(u) { var id = driveId(u); return id ? "https://drive.google.com/file/d/" + id + "/view" : u; }
   function dlUrl(u) { var id = driveId(u); return id ? "https://drive.google.com/uc?export=download&id=" + id : u; }
+  function photoUrl(f) {
+    f = String(f || "").trim();
+    if (!f) return "";
+    if (/^https?:\/\//i.test(f) || f.indexOf("/") >= 0) return f;
+    return "images/products/" + f;
+  }
   function validLink(u) { return !!u && /^https?:\/\//i.test(u) && u.indexOf("EXAMPLE") < 0; }
 
   // ---------- CSV (for the live Google Sheet) ----------
@@ -80,7 +87,7 @@
   function fromSheet(prodRows, docRows) {
     return {
       products: toObjects(prodRows).filter(function (p) { return p.model; }).map(function (p) {
-        return { brand: p.brand, category: p.category, model: p.model, desc: p["short description"] || "" };
+        return { brand: p.brand, category: p.category, model: p.model, desc: p["short description"] || "", photo: p.photo || "" };
       }),
       documents: toObjects(docRows).map(function (d) {
         return { brand: d.brand, model: d.model, type: d.type, name: d["name shown on website"] || d["document name"] || d.type, link: d["drive link"] };
@@ -89,14 +96,14 @@
   }
   function normalise(data) {
     var products = (data.products || []).map(function (p) {
-      return { brand: p.brand, b: brandSlug(p.brand), category: p.category || "Products", group: groupOf(p.category), model: p.model, desc: p.desc || "" };
+      return { brand: p.brand, b: brandSlug(p.brand), category: p.category || "Products", group: groupOf(p.category), model: p.model, desc: p.desc || "", photo: photoUrl(p.photo) };
     });
     var catOf = {};
     products.forEach(function (p) { catOf[p.b + "|" + p.model] = p; });
     var docs = (data.documents || []).filter(function (d) { return validLink(d.link); }).map(function (d) {
       var b = brandSlug(d.brand), p = catOf[b + "|" + (d.model || "")];
       return { brand: d.brand, b: b, model: d.model || "", type: d.type || "Other", name: d.name || d.type || "Document",
-        link: d.link, view: viewUrl(d.link), dl: dlUrl(d.link), group: p ? p.group : "other", category: p ? p.category : "" };
+        link: d.link, view: viewUrl(d.link), dl: dlUrl(d.link), group: p ? p.group : "other", category: p ? p.category : "", photo: p ? p.photo : "" };
     });
     return { products: products, documents: docs };
   }
@@ -162,16 +169,18 @@
     prods.forEach(function (p) { if (!byCat[p.category]) { byCat[p.category] = []; cats.push(p.category); } byCat[p.category].push(p); });
     var html = "";
     if (general.length) {
-      html += '<div class="cat-block"><h3 class="cat-title">General documents</h3><div class="models"><article class="model">' +
+      html += '<div class="cat-block"><h3 class="cat-title">General documents</h3><div class="models"><article class="model model-general">' +
         "<h4>All " + esc(prods[0] ? prods[0].brand : "") + " products</h4>" + docsBlock(general) + "</article></div></div>";
     }
     cats.forEach(function (c) {
       html += '<div class="cat-block"><h3 class="cat-title">' + esc(c) + ' <span class="count">' + byCat[c].length + "</span></h3><div class=\"models\">";
       byCat[c].forEach(function (p) {
         var mine = docs.filter(function (d) { return d.model === p.model; });
-        html += '<article class="model" id="m-' + slug(p.model) + '"><h4>' + esc(p.model) + "</h4>" +
+        html += '<article class="model' + (p.photo ? " has-photo" : "") + '" id="m-' + slug(p.model) + '">' +
+          '<div class="model-photo">' + (p.photo ? '<img src="' + esc(p.photo) + '" alt="' + esc(p.model) + '" loading="lazy" decoding="async">' : ICON_PH) + "</div>" +
+          '<div class="model-body"><h4>' + esc(p.model) + "</h4>" +
           (p.desc ? '<p class="desc">' + esc(p.desc) + "</p>" : "") + docsBlock(mine) +
-          '<a class="quote-link" href="contact.html?model=' + encodeURIComponent(p.model) + '">Request a quote</a></article>';
+          '<a class="quote-link" href="contact.html?model=' + encodeURIComponent(p.model) + '">Request a quote</a></div></article>';
       });
       html += "</div></div>";
     });
@@ -216,7 +225,8 @@
       list.innerHTML = r.map(function (d) {
         var title = d.model ? d.model + " – " + d.name : d.name;
         var meta = [d.brand, d.model ? "" : "All products", d.type].filter(Boolean).join(" · ");
-        return '<div class="doc">' + ICON_DOC + "<div><h3>" + esc(title) + "</h3><p>" + esc(meta) + '</p></div><div class="acts">' + acts(d) + "</div></div>";
+        var thumb = d.photo ? '<span class="doc-thumb"><img src="' + esc(d.photo) + '" alt="" loading="lazy" decoding="async"></span>' : ICON_DOC;
+        return '<div class="doc">' + thumb + "<div><h3>" + esc(title) + "</h3><p>" + esc(meta) + '</p></div><div class="acts">' + acts(d) + "</div></div>";
       }).join("");
     }
     fb.onchange = fc.onchange = render;
