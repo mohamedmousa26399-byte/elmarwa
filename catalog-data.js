@@ -223,7 +223,7 @@ window.CATALOG_SNAPSHOT={
 "category": "Sigen NEO – home solution",
 "model": "Sigen Neo SE inverter (2.5–6 kW)",
 "desc": "Home hybrid inverter, 2.5–6 kW",
-"photo": "",
+"photo": "sigenergy-sigenstor.webp",
 "category_ar": "Sigen NEO – حلول الطاقة المنزلية",
 "desc_ar": "إنفرتر منزلي هجين بقدرة 2.5–6 kW"
 },
@@ -232,7 +232,7 @@ window.CATALOG_SNAPSHOT={
 "category": "Sigen NEO – home solution",
 "model": "Sigen Neo SP inverter (8–10 kW)",
 "desc": "Home hybrid inverter, 8–10 kW",
-"photo": "",
+"photo": "sigenergy-sigenstor.webp",
 "category_ar": "Sigen NEO – حلول الطاقة المنزلية",
 "desc_ar": "إنفرتر منزلي هجين بقدرة 8–10 kW"
 },
@@ -241,7 +241,7 @@ window.CATALOG_SNAPSHOT={
 "category": "Sigen NEO – home solution",
 "model": "Sigen Neo TP inverter (3–15 kW)",
 "desc": "Home hybrid inverter, 3–15 kW",
-"photo": "",
+"photo": "sigenergy-sigenstor.webp",
 "category_ar": "Sigen NEO – حلول الطاقة المنزلية",
 "desc_ar": "إنفرتر منزلي هجين بقدرة 3–15 kW"
 },
@@ -259,7 +259,7 @@ window.CATALOG_SNAPSHOT={
 "category": "SigenStack – hybrid C&I solution",
 "model": "SigenStack – hybrid C&I solution",
 "desc": "Hybrid C&I system: HYB inverters, SigenStack batteries and Gateway",
-"photo": "",
+"photo": "sigenstack.webp",
 "category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
 "desc_ar": "نظام هجين للمنشآت التجارية والصناعية: إنفرترات HYB وبطاريات SigenStack وجيتواي"
 },
@@ -268,7 +268,7 @@ window.CATALOG_SNAPSHOT={
 "category": "SigenStack – hybrid C&I solution",
 "model": "Sigen PV 50–125M1-HYB inverter",
 "desc": "Hybrid C&I inverter, 50–125 kW",
-"photo": "",
+"photo": "sigen-hyb-inverter.webp",
 "category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
 "desc_ar": "إنفرتر هجين للمنشآت التجارية والصناعية بقدرة 50–125 kW"
 },
@@ -277,7 +277,7 @@ window.CATALOG_SNAPSHOT={
 "category": "SigenStack – hybrid C&I solution",
 "model": "SigenStack battery",
 "desc": "Modular C&I battery energy storage",
-"photo": "",
+"photo": "sigenstack.webp",
 "category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
 "desc_ar": "بطاريات تخزين معيارية للمنشآت التجارية والصناعية"
 },
@@ -286,7 +286,7 @@ window.CATALOG_SNAPSHOT={
 "category": "SigenStack – hybrid C&I solution",
 "model": "Sigen Gateway",
 "desc": "Gateway for system control and grid connection",
-"photo": "",
+"photo": "sigen-gateway.webp",
 "category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
 "desc_ar": "جيتواي للتحكم في النظام والربط بالشبكة"
 },
@@ -295,7 +295,7 @@ window.CATALOG_SNAPSHOT={
 "category": "Monitoring",
 "model": "mySigen app",
 "desc": "Monitoring and control app for Sigenergy systems",
-"photo": "",
+"photo": "mysigen-app.webp",
 "category_ar": "المراقبة",
 "desc_ar": "تطبيق مراقبة وتحكم لأنظمة سيجنرجي"
 }
