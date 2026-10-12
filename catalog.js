@@ -24,10 +24,12 @@
     "newmax": "نيوماكس", "his": "إتش آي إس (هيكرا)", "suntree": "سنتري", "elmarwa": "المروة" };
   var TYPE_AR = { "Datasheet": "داتا شيت", "OND file": "ملف OND", "PAN file": "ملف PAN", "User manual": "دليل المستخدم", "Quick guide": "الدليل السريع",
     "Installation manual": "دليل التركيب", "O&M manual": "دليل التشغيل والصيانة", "Unpacking manual": "تعليمات الفك والتخزين",
-    "Unloading manual": "دليل التفريغ", "Cleaning manual": "دليل التنظيف", "Certificate": "شهادة", "Product catalogue": "كتالوج المنتجات", "Other": "أخرى" };
+    "Unloading manual": "دليل التفريغ", "Cleaning manual": "دليل التنظيف", "Certificate": "شهادة", "Product catalogue": "كتالوج المنتجات", "Other": "أخرى",
+    "Warranty": "الضمان", "BTR file": "ملف BTR" };
   var CAT_AR = { "On-grid inverters": "إنفرترات متصلة بالشبكة", "Hybrid inverters": "إنفرترات هجينة", "Monitoring": "المراقبة",
     "C&I battery": "بطاريات المنشآت التجارية والصناعية", "Home battery": "بطاريات منزلية", "PV modules": "ألواح شمسية", "Batteries": "بطاريات",
-    "Solar pump drives": "إنفرترات الطلمبات الشمسية", "Mounting structures": "هياكل تثبيت الألواح", "DC cables": "كابلات التيار المستمر (DC)", "DC protection": "حمايات التيار المستمر (DC)" };
+    "Solar pump drives": "إنفرترات الطلمبات الشمسية", "Mounting structures": "هياكل تثبيت الألواح", "DC cables": "كابلات التيار المستمر (DC)", "DC protection": "حمايات التيار المستمر (DC)",
+    "Sigen NEO – home solution": "Sigen NEO – حلول الطاقة المنزلية", "SigenStack – hybrid C&I solution": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية" };
   function brandName(slug, fallback) { return AR && BRAND_AR[slug] ? BRAND_AR[slug] : fallback; }
   function typeName(t) { return AR && TYPE_AR[t] ? TYPE_AR[t] : t; }
   var BRAND_SLUG = {
@@ -47,21 +49,22 @@
     : [["modules", "PV modules"], ["inverters", "Inverters"], ["storage", "Batteries"], ["monitoring", "Monitoring"],
     ["pumping", "Solar pump drives"], ["mounting", "Mounting structures"], ["cables", "DC cables"], ["protection", "DC protection"]];
   var TYPE_ORDER = ["Datasheet", "Product catalogue", "User manual", "Quick guide", "Installation manual", "O&M manual",
-    "Unpacking manual", "Unloading manual", "Cleaning manual", "OND file", "PAN file", "Other", "Certificate", "Test report"];
+    "Unpacking manual", "Unloading manual", "Cleaning manual", "OND file", "PAN file", "BTR file", "Warranty", "Other", "Certificate", "Test report"];
   var PLURAL = AR ? { "Datasheet": "داتا شيت", "OND file": "ملفات PVsyst OND", "PAN file": "ملفات PVsyst PAN", "Certificate": "الشهادات",
     "Test report": "تقارير الاختبار", "User manual": "أدلة المستخدم", "Quick guide": "الأدلة السريعة", "Product catalogue": "كتالوجات المنتجات",
-    "Installation manual": "أدلة التركيب", "O&M manual": "أدلة التشغيل والصيانة", "Other": "مستندات أخرى" } : { "Datasheet": "Datasheets", "OND file": "PVsyst OND files", "PAN file": "PVsyst PAN files",
+    "Installation manual": "أدلة التركيب", "O&M manual": "أدلة التشغيل والصيانة", "Other": "مستندات أخرى",
+    "Warranty": "مستندات الضمان", "BTR file": "ملفات PVsyst BTR" } : { "Warranty": "Warranty documents", "BTR file": "PVsyst BTR files", "Installation manual": "Installation manuals", "Datasheet": "Datasheets", "OND file": "PVsyst OND files", "PAN file": "PVsyst PAN files",
     "Certificate": "Certificates", "Test report": "Test reports", "User manual": "User manuals", "Quick guide": "Quick guides",
     "Product catalogue": "Product catalogues", "Other": "Other documents" };
   var ALWAYS_GROUP = { "Certificate": 1, "Test report": 1 };
-  var DOWNLOAD_ONLY = { "OND file": 1, "PAN file": 1 };
+  var DOWNLOAD_ONLY = { "OND file": 1, "PAN file": 1, "BTR file": 1 };
   var TYPE_FILTERS = AR ? [["", "الكل"], ["datasheets", "داتا شيت"], ["manuals", "الأدلة"], ["pvsyst", "ملفات PVsyst"],
     ["certificates", "الشهادات"], ["reports", "تقارير الاختبار"], ["other", "أخرى"]]
     : [["", "All"], ["datasheets", "Datasheets"], ["manuals", "Manuals & guides"], ["pvsyst", "PVsyst files"],
     ["certificates", "Certificates"], ["reports", "Test reports"], ["other", "Other"]];
   function typeFilter(t) {
     if (t === "Datasheet") return "datasheets";
-    if (t === "OND file" || t === "PAN file") return "pvsyst";
+    if (t === "OND file" || t === "PAN file" || t === "BTR file") return "pvsyst";
     if (t === "Certificate") return "certificates";
     if (t === "Test report") return "reports";
     if (/manual|guide|catalogue/i.test(t)) return "manuals";
@@ -76,7 +79,17 @@
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function slug(s) { return String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); }
   function brandSlug(b) { var k = String(b || "").trim().toLowerCase(); return BRAND_SLUG[k] || slug(k); }
-  function groupOf(cat) { return GROUP_OF[String(cat || "").trim().toLowerCase()] || "other"; }
+  // A category may be a whole solution (e.g. "SigenStack – hybrid C&I solution"); then the product type is read from the model name.
+  function groupOf(cat, model) {
+    var g = GROUP_OF[String(cat || "").trim().toLowerCase()];
+    if (g) return g;
+    var m = String(model || "");
+    if (/batter|\bbat\b|stack battery/i.test(m)) return "storage";
+    if (/inverter|hyb/i.test(m)) return "inverters";
+    if (/gateway|app|logger|monitor|meter/i.test(m)) return "monitoring";
+    if (/solution|system/i.test(m)) return "storage";
+    return "other";
+  }
   function driveId(u) {
     if (!u) return "";
     var m = u.match(/\/d\/([\w-]{20,})/) || u.match(/[?&]id=([\w-]{20,})/);
@@ -131,7 +144,7 @@
     var products = (data.products || []).map(function (p) {
       var b = brandSlug(p.brand);
       return { brand: brandName(b, p.brand), b: b, category: (AR && (p.category_ar || CAT_AR[p.category])) || p.category || "Products", catKey: p.category,
-        group: groupOf(p.category), model: p.model, desc: (AR && p.desc_ar) || p.desc || "", photo: photoUrl(p.photo) };
+        group: groupOf(p.category, p.model), model: p.model, desc: (AR && p.desc_ar) || p.desc || "", photo: photoUrl(p.photo) };
     });
     var catOf = {};
     products.forEach(function (p) { catOf[p.b + "|" + p.model] = p; });

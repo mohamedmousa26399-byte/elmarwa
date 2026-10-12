@@ -208,6 +208,96 @@ window.CATALOG_SNAPSHOT={
 "photo": "newmax-lfp-battery.webp",
 "category_ar": "بطاريات",
 "desc_ar": "بطارية ليثيوم LFP"
+},
+{
+"brand": "Sigenergy",
+"category": "Sigen NEO – home solution",
+"model": "SigenStor Neo – home solution",
+"desc": "Complete home system: Neo hybrid inverter + Neo battery",
+"photo": "sigenergy-sigenstor.webp",
+"category_ar": "Sigen NEO – حلول الطاقة المنزلية",
+"desc_ar": "نظام منزلي متكامل: إنفرتر Neo هجين مع بطارية Neo"
+},
+{
+"brand": "Sigenergy",
+"category": "Sigen NEO – home solution",
+"model": "Sigen Neo SE inverter (2.5–6 kW)",
+"desc": "Home hybrid inverter, 2.5–6 kW",
+"photo": "",
+"category_ar": "Sigen NEO – حلول الطاقة المنزلية",
+"desc_ar": "إنفرتر منزلي هجين بقدرة 2.5–6 kW"
+},
+{
+"brand": "Sigenergy",
+"category": "Sigen NEO – home solution",
+"model": "Sigen Neo SP inverter (8–10 kW)",
+"desc": "Home hybrid inverter, 8–10 kW",
+"photo": "",
+"category_ar": "Sigen NEO – حلول الطاقة المنزلية",
+"desc_ar": "إنفرتر منزلي هجين بقدرة 8–10 kW"
+},
+{
+"brand": "Sigenergy",
+"category": "Sigen NEO – home solution",
+"model": "Sigen Neo TP inverter (3–15 kW)",
+"desc": "Home hybrid inverter, 3–15 kW",
+"photo": "",
+"category_ar": "Sigen NEO – حلول الطاقة المنزلية",
+"desc_ar": "إنفرتر منزلي هجين بقدرة 3–15 kW"
+},
+{
+"brand": "Sigenergy",
+"category": "Sigen NEO – home solution",
+"model": "Sigen Neo battery",
+"desc": "Stackable home battery for the SigenStor Neo system",
+"photo": "sigenergy-sigenstor.webp",
+"category_ar": "Sigen NEO – حلول الطاقة المنزلية",
+"desc_ar": "بطارية منزلية قابلة للتوسعة لنظام SigenStor Neo"
+},
+{
+"brand": "Sigenergy",
+"category": "SigenStack – hybrid C&I solution",
+"model": "SigenStack – hybrid C&I solution",
+"desc": "Hybrid C&I system: HYB inverters, SigenStack batteries and Gateway",
+"photo": "",
+"category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
+"desc_ar": "نظام هجين للمنشآت التجارية والصناعية: إنفرترات HYB وبطاريات SigenStack وجيتواي"
+},
+{
+"brand": "Sigenergy",
+"category": "SigenStack – hybrid C&I solution",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"desc": "Hybrid C&I inverter, 50–125 kW",
+"photo": "",
+"category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
+"desc_ar": "إنفرتر هجين للمنشآت التجارية والصناعية بقدرة 50–125 kW"
+},
+{
+"brand": "Sigenergy",
+"category": "SigenStack – hybrid C&I solution",
+"model": "SigenStack battery",
+"desc": "Modular C&I battery energy storage",
+"photo": "",
+"category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
+"desc_ar": "بطاريات تخزين معيارية للمنشآت التجارية والصناعية"
+},
+{
+"brand": "Sigenergy",
+"category": "SigenStack – hybrid C&I solution",
+"model": "Sigen Gateway",
+"desc": "Gateway for system control and grid connection",
+"photo": "",
+"category_ar": "SigenStack – حلول هجينة للمنشآت التجارية والصناعية",
+"desc_ar": "جيتواي للتحكم في النظام والربط بالشبكة"
+},
+{
+"brand": "Sigenergy",
+"category": "Monitoring",
+"model": "mySigen app",
+"desc": "Monitoring and control app for Sigenergy systems",
+"photo": "",
+"category_ar": "المراقبة",
+"desc_ar": "تطبيق مراقبة وتحكم لأنظمة سيجنرجي"
 }
 ],
 "documents": [
@@ -2178,6 +2268,294 @@ window.CATALOG_SNAPSHOT={
 "name": "User manual",
 "link": "https://drive.google.com/file/d/1lW2eFrKCxpqZWEbLa2p79RG5DutJTwrX/view?usp=sharing",
 "name_ar": "دليل المستخدم"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStor Neo – home solution",
+"type": "Product catalogue",
+"name": "Solution overview (presentation)",
+"link": "https://drive.google.com/file/d/117Y1amL4b2WldHE-PRNdxUFctoBNHAFZ/view?usp=sharing",
+"name_ar": "عرض تقديمي للحل"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStor Neo – home solution",
+"type": "Installation manual",
+"name": "Installation manual – single-phase",
+"link": "https://drive.google.com/file/d/17GAtkWHyfo8CXdmrQQMfcSoAE0WrJ05O/view?usp=sharing",
+"name_ar": "دليل التركيب – أحادي الطور"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStor Neo – home solution",
+"type": "Installation manual",
+"name": "Installation manual – three-phase",
+"link": "https://drive.google.com/file/d/1elU231i8x1WTYh6BpbDYwrJVNa1x1jaY/view?usp=sharing",
+"name_ar": "دليل التركيب – ثلاثي الأوجه"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStor Neo – home solution",
+"type": "Warranty",
+"name": "Warranty (SigenStor & SigenStor Neo)",
+"link": "https://drive.google.com/file/d/1Z8AdEKK8a8nVYToO-GtMABt1sQSYTmzC/view?usp=sharing",
+"name_ar": "الضمان (SigenStor وSigenStor Neo)"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Neo SE inverter (2.5–6 kW)",
+"type": "Datasheet",
+"name": "Datasheet",
+"link": "https://drive.google.com/file/d/1JT0ySvn-Wh9r2OyeFPClT5XW6V9tjOjV/view?usp=sharing",
+"name_ar": "داتا شيت"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Neo SP inverter (8–10 kW)",
+"type": "Datasheet",
+"name": "Datasheet",
+"link": "https://drive.google.com/file/d/1ROf7XL0z8oCwQbwyBxC77WVBlCXogG_D/view?usp=sharing",
+"name_ar": "داتا شيت"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Neo TP inverter (3–15 kW)",
+"type": "Datasheet",
+"name": "Datasheet",
+"link": "https://drive.google.com/file/d/1SJjOIVCNCu3gzDp-IREO-4E_Z7Nk5pDS/view?usp=sharing",
+"name_ar": "داتا شيت"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Neo battery",
+"type": "Datasheet",
+"name": "Datasheet",
+"link": "https://drive.google.com/file/d/14lanOY59YUF4EANzywnDyfwozJjd3WRF/view?usp=sharing",
+"name_ar": "داتا شيت"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack – hybrid C&I solution",
+"type": "Warranty",
+"name": "C&I factory limited warranty",
+"link": "https://drive.google.com/file/d/1tClxPVntc_RetoNQAUxxFG1gU3Vw8MS3/view?usp=sharing",
+"name_ar": "ضمان المصنع المحدود للمنشآت التجارية والصناعية"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack – hybrid C&I solution",
+"type": "Certificate",
+"name": "CE attestation (CNDQ-ESH-P25110258B)",
+"link": "https://drive.google.com/file/d/121XHz_7q78Egb0vhNMYWii0IznUzqaK7/view?usp=sharing",
+"name_ar": "شهادة مطابقة CE ‏(CNDQ-ESH-P25110258B)"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack – hybrid C&I solution",
+"type": "Certificate",
+"name": "Certificate FR 723660",
+"link": "https://drive.google.com/file/d/1tahnSWuyYft6K_qDGQG9wn43P1y5HS5L/view?usp=sharing",
+"name_ar": "شهادة FR 723660"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Datasheet",
+"name": "Datasheet – 50–125 kW (preliminary)",
+"link": "https://drive.google.com/file/d/1RddpOltKTv_j7EtkPfZKCTRlMdVBx0xN/view?usp=sharing",
+"name_ar": "داتا شيت – 50–125 kW (نسخة مبدئية)"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Datasheet",
+"name": "Datasheet – 50–110 kW",
+"link": "https://drive.google.com/file/d/1z8y8hJcXctbiRUtHEeOq4oI6WHvcnysl/view?usp=sharing",
+"name_ar": "داتا شيت – 50–110 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 50 kW",
+"link": "https://drive.google.com/file/d/1Wz3GGjhl9n7bMEp7wIbHoE2xnE92NOpH/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 50 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 60 kW",
+"link": "https://drive.google.com/file/d/1l9QDU_E2eLMdJwXCB4EJv7cHXYt-UrFy/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 60 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 80 kW",
+"link": "https://drive.google.com/file/d/1g4v04Tm0goyVm48RzGKOwmFpj358GoG_/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 80 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 100 kW",
+"link": "https://drive.google.com/file/d/1EIfW9S3TQ5NO-SpYX3YXL4d8OQV9l3he/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 100 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 110 kW",
+"link": "https://drive.google.com/file/d/1BnRlYzBN2RSrvlEvCOKHvQ38glPqSvSc/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 110 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "OND file",
+"name": "PVsyst OND file – 125 kW",
+"link": "https://drive.google.com/file/d/13uwIfXWxsSG1jOv2r21l9PHNk3kTAlQS/view?usp=sharing",
+"name_ar": "ملف PVsyst OND – 125 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Installation manual",
+"name": "Installation manual – 50–110 kW series",
+"link": "https://drive.google.com/file/d/1Thp1jVcqf9F3VliHqLP-jFNfRRe6WtJi/view?usp=sharing",
+"name_ar": "دليل التركيب – فئة 50–110 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Other",
+"name": "Packing list – 50 kW",
+"link": "https://drive.google.com/file/d/1dB4i1t2mpGHZpOdpr9rxhYEor4rgHjU8/view?usp=sharing",
+"name_ar": "قائمة التعبئة – 50 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Other",
+"name": "Packing list – 60 kW",
+"link": "https://drive.google.com/file/d/1YsoW1ufZqWsmKCtfeZGiChmKUdtDjGoI/view?usp=sharing",
+"name_ar": "قائمة التعبئة – 60 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Other",
+"name": "Packing list – 80 kW",
+"link": "https://drive.google.com/file/d/1XoMEi7hUSwYOfNX5ikzQXlZd4TIgdd4J/view?usp=sharing",
+"name_ar": "قائمة التعبئة – 80 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Other",
+"name": "Packing list – 100–125 kW",
+"link": "https://drive.google.com/file/d/1WMAJEkHJCLNtTneCvnzaMOGGVdlHzCxR/view?usp=sharing",
+"name_ar": "قائمة التعبئة – 100–125 kW"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen PV 50–125M1-HYB inverter",
+"type": "Certificate",
+"name": "NRS 097-2-1",
+"link": "https://drive.google.com/file/d/1TqHIULiPd6Hkh-vSJXnedN-wtRydc_ia/view?usp=sharing",
+"name_ar": "NRS 097-2-1"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "Datasheet",
+"name": "Datasheet – SigenStack C&I ESS",
+"link": "https://drive.google.com/file/d/1WVZ5JmNH5h6PY8EZDmPOQ3Bx-RQlAwIh/view?usp=sharing",
+"name_ar": "داتا شيت – SigenStack C&I ESS"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "BTR file",
+"name": "PVsyst BTR file – SigenStack BAT 12.0",
+"link": "https://drive.google.com/file/d/1HJUih1RAHP_mrwM_KbWF80wqPPpnTKE1/view?usp=sharing",
+"name_ar": "ملف PVsyst BTR – SigenStack BAT 12.0"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "Installation manual",
+"name": "Installation manual",
+"link": "https://drive.google.com/file/d/1MtS7SFW3BrPpWjGU6Keg8FI-H7my0iBx/view?usp=sharing",
+"name_ar": "دليل التركيب"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "Certificate",
+"name": "IEC 63056",
+"link": "https://drive.google.com/file/d/1EpVnmc8zUFh1gXj1lj_BVrnrShy-MLqE/view?usp=sharing",
+"name_ar": "IEC 63056"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "Certificate",
+"name": "IEC 62619 (CB)",
+"link": "https://drive.google.com/file/d/12e2Pz-97bOIWrDNGXtpuuknMwd44aqC-/view?usp=sharing",
+"name_ar": "IEC 62619 (CB)"
+},
+{
+"brand": "Sigenergy",
+"model": "SigenStack battery",
+"type": "Certificate",
+"name": "UL 9540A",
+"link": "https://drive.google.com/file/d/1qgyWE4RvyiFMkD9hgmsoDZSdvRFOEL3Z/view?usp=sharing",
+"name_ar": "UL 9540A"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Gateway",
+"type": "Installation manual",
+"name": "Installation manual – C180-9, C300-12, C300-B",
+"link": "https://drive.google.com/file/d/1Afe2cE7Cyp_0kVcGemxevN95MnnLKqOU/view?usp=sharing",
+"name_ar": "دليل التركيب – C180-9, C300-12, C300-B"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Gateway",
+"type": "Installation manual",
+"name": "Installation manual – C600, C1200, C600-B, C1200-B",
+"link": "https://drive.google.com/file/d/1PV6vg1NYckdcTWskVymrJSygVfrHO1DC/view?usp=sharing",
+"name_ar": "دليل التركيب – C600, C1200, C600-B, C1200-B"
+},
+{
+"brand": "Sigenergy",
+"model": "Sigen Gateway",
+"type": "Installation manual",
+"name": "Installation manual – C1600-B, C2000-B, C2400-B",
+"link": "https://drive.google.com/file/d/1GzbBwwYMxQATooYuOAfvF6p3Z_qyONZ9/view?usp=sharing",
+"name_ar": "دليل التركيب – C1600-B, C2000-B, C2400-B"
+},
+{
+"brand": "Sigenergy",
+"model": "mySigen app",
+"type": "User manual",
+"name": "User manual",
+"link": "https://drive.google.com/file/d/1YljT1xoTlfIa7I34ChlnlKYWJsRDouO7/view?usp=sharing",
+"name_ar": "دليل المستخدم"
+},
+{
+"brand": "Sigenergy",
+"model": "mySigen app",
+"type": "Installation manual",
+"name": "Installer manual",
+"link": "https://drive.google.com/file/d/1RGOErzrKkL0tMuqH1KnnXb83znGjeYev/view?usp=sharing",
+"name_ar": "دليل المُركِّب"
 }
 ]
 };
