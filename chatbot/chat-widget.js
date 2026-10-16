@@ -94,6 +94,15 @@
     }
   }
   launcher.addEventListener("click", () => toggle(panel.hidden));
+
+  // "Ask Our Bot" menu item (and any link with data-open-chat or #ask-bot) opens the chat
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest && e.target.closest('[data-open-chat], a[href$="#ask-bot"]');
+    if (!link) return;
+    e.preventDefault();
+    toggle(true);
+  });
+  if (location.hash === "#ask-bot") toggle(true);
   root.querySelector(".em-close").addEventListener("click", () => toggle(false));
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !panel.hidden) toggle(false); });
 
