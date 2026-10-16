@@ -1,0 +1,11 @@
+{
+  "name": "elmarwa-chatbot-sync",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "googleapis": "^144.0.0",
+    "mammoth": "^1.8.0",
+    "unpdf": "^0.12.1",
+    "xlsx": "^0.18.5"
+  }
+}

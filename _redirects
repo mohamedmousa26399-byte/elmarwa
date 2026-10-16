@@ -1,1 +1,6 @@
 /brand-vacon.html  /brands.html  301
+
+# Chatbot: keep the knowledge file and sync scripts private
+/netlify/*  /404.html  404!
+/scripts/*  /404.html  404!
+/.github/*  /404.html  404!

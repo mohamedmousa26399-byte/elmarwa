@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Chatbot handoff form</title></head>
+<body>
+<!-- Netlify reads this hidden form at deploy time so the chat widget can submit to it.
+     Do not delete. Field names must match chatbot/chat-widget.js. -->
+<form name="chatbot-handoff" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input name="bot-field">
+  <input name="name">
+  <input name="email">
+  <input name="phone">
+  <textarea name="request"></textarea>
+  <textarea name="transcript"></textarea>
+  <input name="page">
+  <input name="language">
+</form>
+</body>
+</html>
